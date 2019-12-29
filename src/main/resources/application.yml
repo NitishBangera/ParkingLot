@@ -1,0 +1,22 @@
+db:
+  host: localhost
+  port: 3306
+  database: parking
+  username: admin
+  password: admin
+
+spring:
+  datasource:
+    url: jdbc:mariadb://${db.host}:${db.port}/${db.database}
+    username: ${db.username}
+    password: ${db.password}
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+  session:
+    store-jdbc: jdbc
+    jdbc:
+      initialize-schema: always
+    timeout:
+      seconds: 900
