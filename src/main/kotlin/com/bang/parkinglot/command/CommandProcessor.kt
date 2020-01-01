@@ -1,6 +1,6 @@
 package com.bang.parkinglot.command
 
-interface Command {
+interface CommandProcessor {
     fun getName() : String
 
     fun process(commandRequest: CommandRequest) : CommandResponse
