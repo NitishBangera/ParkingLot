@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class ParkinglotApplication
+class ParkingLotApplication
 
 fun main(args: Array<String>) {
-    runApplication<ParkinglotApplication>(*args)
+    runApplication<ParkingLotApplication>(*args)
 }
