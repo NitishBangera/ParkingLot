@@ -5,12 +5,12 @@ import org.springframework.stereotype.Component
 
 @Component
 class CommandFactory {
-    private val commands: MutableMap<String, CommandProcessor> = HashMap()
+    private val commands: MutableMap<CommandType, CommandProcessor> = HashMap()
 
     @Autowired
     constructor(commandProcessors: List<CommandProcessor>) {
-        for (commandProcessor in commandProcessors) commands[commandProcessor.getName()] = commandProcessor
+        for (commandProcessor in commandProcessors) commands[commandProcessor.getType()] = commandProcessor
     }
 
-    fun getCommandProcessor(command: String) = commands[command]
+    fun getCommandProcessor(command: CommandType) = commands[command]
 }

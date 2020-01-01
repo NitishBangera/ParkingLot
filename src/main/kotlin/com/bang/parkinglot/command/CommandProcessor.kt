@@ -1,7 +1,7 @@
 package com.bang.parkinglot.command
 
 interface CommandProcessor {
-    fun getName() : String
+    fun getType() : CommandType
 
     fun process(commandRequest: CommandRequest) : CommandResponse
 }

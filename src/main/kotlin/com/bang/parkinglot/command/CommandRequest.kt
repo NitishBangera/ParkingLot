@@ -2,7 +2,7 @@ package com.bang.parkinglot.command
 
 import java.util.*
 
-class CommandRequest(val command: String) {
+class CommandRequest(val commandType: CommandType) {
     private val inputs: MutableList<String> = LinkedList()
 
     fun addInput(input: String) {
