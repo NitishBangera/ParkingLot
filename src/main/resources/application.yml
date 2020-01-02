@@ -12,6 +12,9 @@ spring:
     password: ${db.password}
     driver-class-name: org.mariadb.jdbc.Driver
   jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDB103Dialect
     hibernate:
       ddl-auto: update
   session:
